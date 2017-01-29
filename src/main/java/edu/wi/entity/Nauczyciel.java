@@ -4,20 +4,20 @@ import java.util.List;
 
 public class Nauczyciel extends User {
 
-	private List<Przedmiot> przedmiot;
-	private List<Klasa> klasa;
+	private List<String> przedmiot;
+	private List<String> klasa;
 	
-	public List<Przedmiot> getPrzedmiot() {
+	public List<String> getPrzedmiot() {
 		return przedmiot;
 	}
-	public void setPrzedmiot(List<Przedmiot> przedmiot) {
-		this.przedmiot = przedmiot;
+	public void setPrzedmiot(String przedmiot) {
+		this.przedmiot.add(przedmiot);
 	}
-	public List<Klasa> getKlasa() {
+	public List<String> getKlasa() {
 		return klasa;
 	}
-	public void setKlasa(List<Klasa> klasa) {
-		this.klasa = klasa;
+	public void setKlasa(String klasa) {
+		this.klasa.add(klasa);
 	}
 	
 	
