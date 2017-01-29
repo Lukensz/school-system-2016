@@ -44,6 +44,18 @@ public class UzytkownikDAO {
 		jdbcTemplate.update(sql, rodzic.getImie(), rodzic.getNazwisko(), rodzic.getLogin(), rodzic.getPassword(), rodzic.getEmail(), rodzic.getTelefon());
 	}
 	
+	public void edit(User user) {
+		if(user.getImie() != null) {
+			String sql = "UPDATE User SET imie = ? WHERE id = ?";
+			jdbcTemplate.update(sql, user.getImie(), user.getId());
+		}
+		
+		if(user.getNazwisko() != null) {
+			String sql = "UPDATE User SET nazwisko = ? WHERE id = ?";
+			jdbcTemplate.update(sql, user.getNazwisko(), user.getId());
+		}
+	}
+	
 	public List<User> getAll() {
 		String sql = "SELECT imie, nazwisko, login, email FROM User";
 		
