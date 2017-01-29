@@ -2,13 +2,13 @@ package edu.wi.entity;
 
 public class Uczen extends User {
 
-	private Klasa klasa;
+	private String klasa;
 
-	public Klasa getKlasa() {
+	public String getKlasa() {
 		return klasa;
 	}
 
-	public void setKlasa(Klasa klasa) {
+	public void setKlasa(String klasa) {
 		this.klasa = klasa;
 	}
 	
