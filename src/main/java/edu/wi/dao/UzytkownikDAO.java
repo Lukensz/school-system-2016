@@ -71,6 +71,10 @@ public class UzytkownikDAO {
 		return user;
 		
 	}
+	
+	public void delete(int id) {
+		jdbcTemplate.update("DELETE FROM users WHERE id = ?", new Object[] { id });
+	}
 
 	
 }
